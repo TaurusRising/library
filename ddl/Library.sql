@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS readers
 (
     id SERIAL PRIMARY KEY,
     address VARCHAR (255) NOT NULL,
-    phone_number VARCHAR (255),
+    phone_number VARCHAR (255)
 );
 
 CREATE TABLE IF NOT EXISTS orders
@@ -42,5 +42,5 @@ CREATE TABLE IF NOT EXISTS author
 CREATE TABLE IF NOT EXISTS book_author
 (
     FOREIGN KEY (author_id) REFERENCES author (id),
-    FOREIGN KEY (book_id) REFERENCES books (id),
+    FOREIGN KEY (book_id) REFERENCES books (id)
 );
